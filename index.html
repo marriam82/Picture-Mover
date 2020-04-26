@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+</head>
+<style>
+          img{
+                    position: absolute;
+                    left:0;
+                    margin-top:5%;
+                    width:300px;
+                    height:300px;
+          }
+</style>
+<body>
+<button class="btn1">START</button>
+<button class="btn2">STOP</button>
+<button class="btn3">BACK</button>
+<button class="btn4">RETURN</button>
+<img src="mouse.jfif" alt="" class="img">
+
+</body>
+<script src="./jquery-3.4.1.min.js"></script>
+<script>
+
+$('.btn1').on('click',function start(){
+          $('.img').animate({
+                    left: "+=200",
+          },1000,"swing")
+})
+$('.btn2').on('click',function stop(){
+          $('img').animate().stop()
+})
+$('.btn3').on('click',function back(){
+          $('.img').animate({
+                    left:"-=200",
+          },1000,"swing")
+})
+$('.btn4').on('click',function resrt(){
+          $('img').animate({
+           left:"0"
+          },1000)
+})
+var obj ={
+          name:"maryam"
+}
+</script>
+</html>
